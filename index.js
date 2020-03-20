@@ -33,8 +33,8 @@ async function installServerlessAndPlugins() {
 async function runServerlessDeploy() {
   await exeq(
     `echo Running sudo sls deploy ${ARGS}...`,
-    `serverless config credentials --provider aws --key ${AWS_ACCESS_KEY_ID} --secret ${AWS_SECRET_ACCESS_KEY} ${ARGS}`,
-    `serverless deploy ${ARGS}`
+    `sudo serverless config credentials --provider aws --key ${AWS_ACCESS_KEY_ID} --secret ${AWS_SECRET_ACCESS_KEY} ${ARGS}`,
+    `sudo serverless deploy ${ARGS}`
   )
 }
 
